@@ -1,0 +1,13 @@
+{
+    "links": {
+        "sites": [
+            "https://example.com",
+            "https://another-example.com"
+        ],
+        "films": [
+            "https://film1.com",
+            "https://film2.com"
+        ],
+        "me": "Я люблю програмувати на JavaScript."
+    }
+}
