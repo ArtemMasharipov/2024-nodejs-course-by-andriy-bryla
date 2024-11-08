@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vehicle Fleet Management System - <%= car && car.id ? 'Edit' : 'Add' %> Vehicle</title>
+	<link rel="stylesheet" href="/stylesheets/base_styles.css">
+	<link rel="stylesheet" href="/stylesheets/car_views_styles/car_form.css">
+</head>
+
+<body>
+	<header>
+		<h1>
+			<%= car && car.id ? 'Edit' : 'Add' %> Vehicle
+		</h1>
+	</header>
+	<main>
+		<% if (errors && errors.length> 0) { %>
+			<div class="error-messages">
+				<% errors.forEach(error=> { %>
+					<p>
+						<%= error.msg %>
+					</p>
+					<% }) %>
+			</div>
+			<% } %>
+
+				<form action="<%= car && car.id ? '/cars/' + car.id + '?_method=PUT' : '/cars' %>" method="POST"
+					enctype="multipart/form-data">
+					<div>
+						<label for="brand">Car Brand:</label>
+						<input type="text" id="brand" name="brand" value="<%= car?.brand || '' %>" required>
+					</div>
+					<div>
+						<label for="year">Year:</label>
+						<input type="number" id="year" name="year" value="<%= car?.year || '' %>" required>
+					</div>
+					<div>
+						<label for="plate-number">Plate Number:</label>
+						<input type="text" id="plate-number" name="plateNumber" value="<%= car?.plateNumber || '' %>"
+							required>
+					</div>
+					<div>
+						<label for="image">Image:</label>
+						<input type="file" id="image" name="image" accept="image/*" onchange="previewImage(event)">
+						<div id="preview-container">
+							<img id="preview" src="<%= car && car.imgSrc ? '/' + car.imgSrc : '/no_photo.jpg' %>"
+								alt="Image preview">
+						</div>
+					</div>
+					<button type="submit" class="update-button">
+						<%= car && car.id ? 'Update' : 'Create' %>
+					</button>
+				</form>
+	</main>
+	<a href="/cars" class="back-button">Back to list</a>
+	<footer>
+		<p>&copy; 2024 Vehicle Fleet Management System</p>
+	</footer>
+	<script src="/javascripts/preview-image-handler.js"></script>
+</body>
+
+</html>
