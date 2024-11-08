@@ -1,0 +1,50 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"], input[type="file"] {
+    padding: 10px;
+    font-size: 1.1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#preview-container {
+	width: auto; 
+	height: 200px;
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+	border: 1px solid #ccc; 
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+#preview {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+.error-messages {
+	background-color: #f8d7da;
+	color: #721c24;
+	border: 1px solid #f5c6cb;
+	padding: 10px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+.error-messages p {
+	margin: 0;
+	padding: 5px 0;
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "f00022f4-eb57-4e37-9321-0c5fb5a22a30",
+    "brand": "Toyota",
+    "year": "2022",
+    "plateNumber": "123456789",
+    "imgSrc": "1730569968699-toyota-camry-2022.jpg"
+  },
+  {
+    "id": "a884210e-0c66-4d00-bb8a-39fde6016ee0",
+    "brand": "Chevrolet",
+    "year": "2020",
+    "plateNumber": "987654321",
+    "imgSrc": "1730570005243-chevrolet-malibu-2020.jpg"
+  },
+  {
+    "id": "9e1aa73f-5f47-40f7-a59c-eeef00dca4f5",
+    "brand": "Ford",
+    "year": "2021",
+    "plateNumber": "9900000999",
+    "imgSrc": "1730570113317-ford-mustan-2021.jpeg"
+  },
+  {
+    "id": "6d9de944-b492-4190-baba-d8384190a778",
+    "brand": "Honda",
+    "year": "2021",
+    "plateNumber": "009999900",
+    "imgSrc": "1730570141411-honda-accord-2021.jpg"
+  }
+]
