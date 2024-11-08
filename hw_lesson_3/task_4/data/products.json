@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1729449200000, 
+    "name": "Laptop",
+    "price": "1200",
+    "description": "High-performance laptop with 16GB RAM and 512GB SSD."
+  },
+  {
+    "id": 1729449201000, 
+    "name": "Smartphone",
+    "price": "800",
+    "description": "Latest smartphone with OLED display and 5G support."
+  },
+  {
+    "id": 1729449202000, 
+    "name": "Headphones",
+    "price": "150",
+    "description": "Noise-cancelling over-ear headphones."
+  },
+  {
+    "id": 1729449203000, 
+    "name": "Smartwatch",
+    "price": "250",
+    "description": "Smartwatch with health and fitness tracking features."
+  },
+  {
+    "id": 1729449204000, 
+    "name": "Tablet",
+    "price": "400",
+    "description": "10-inch tablet with 64GB storage and 4GB RAM."
+  },
+  {
+    "id": 1729449205000, 
+    "name": "Gaming Console",
+    "price": "500",
+    "description": "Next-gen gaming console with ultra-fast SSD."
+  },
+  {
+    "id": 1729449206000, 
+    "name": "Bluetooth Speaker",
+    "price": "100",
+    "description": "Portable Bluetooth speaker with 10 hours of battery life."
+  },
+  {
+    "id": 1729449207000, 
+    "name": "Camera",
+    "price": "900",
+    "description": "DSLR camera with 24MP sensor and 4K video recording."
+  },
+  {
+    "id": 1729449208000, 
+    "name": "Monitor",
+    "price": "300",
+    "description": "27-inch monitor with 4K resolution and 60Hz refresh rate."
+  },
+  {
+    "id": 1729449209000, 
+    "name": "Keyboard",
+    "price": "80",
+    "description": "Mechanical keyboard with RGB backlighting."
+  },
+  {
+    "id": 1729449210000, 
+    "name": "Mouse",
+    "price": "50",
+    "description": "Wireless mouse with ergonomic design."
+  },
+  {
+    "id": 1729449211000, 
+    "name": "External Hard Drive",
+    "price": "120",
+    "description": "1TB external hard drive with USB-C interface."
+  },
+  {
+    "id": 1729449212000, 
+    "name": "Printer",
+    "price": "200",
+    "description": "All-in-one inkjet printer with wireless connectivity."
+  },
+  {
+    "id": 1729449213000, 
+    "name": "Router",
+    "price": "90",
+    "description": "Dual-band Wi-Fi router with high-speed internet support."
+  },
+  {
+    "id": 1729449214000, 
+    "name": "Webcam",
+    "price": "60",
+    "description": "1080p webcam with built-in microphone for video calls."
+  }
+]
