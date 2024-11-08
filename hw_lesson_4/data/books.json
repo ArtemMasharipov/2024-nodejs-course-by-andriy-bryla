@@ -1,0 +1,44 @@
+[
+  {
+    "id": "a01c1a45-2d83-4a6e-a2e7-4b3b020a8d9e",
+    "title": "1984",
+    "author": "George Orwell",
+    "year": "1949"
+  },
+  {
+    "id": "c1b3d3d2-1f84-4931-8763-05c4b4f56d88",
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "year": "1851"
+  },
+  {
+    "id": "d75a1235-764e-4baf-92f0-14cdbb7932a4",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "year": "1932"
+  },
+  {
+    "id": "f8de52ae-5e7b-4969-b89d-64b64274cc4d",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "year": "1951"
+  },
+  {
+    "id": "e3c4f531-64d1-4694-832f-bdf83c759d8f",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "year": "1925"
+  },
+  {
+    "id": "6e3e6513-d6c5-4bc5-9e2d-0d1b0585c3f4",
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "year": "1869"
+  },
+  {
+    "id": "b365eaf1-6c28-4713-8d9c-e46a9b56d9f7",
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "year": "1890"
+  }
+]

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		<%= book ? 'Edit Book' : 'Add New Book' %>
+	</title>
+	<link rel="stylesheet" href="/stylesheets/base_styles.css">
+</head>
+
+<body>
+	<header>
+		<h1>
+			<%= book ? 'Edit Book' : 'Add New Book' %>
+		</h1>
+	</header>
+	<main>
+		<div class="table-container">
+			<form action="/books<%= book ? `/${book.id}?_method=PUT` : '' %>" method="POST">
+				<div>
+					<label for="title">Title:</label>
+					<input type="text" id="title" name="title" value="<%= book ? book.title : '' %>" required>
+				</div>
+				<div>
+					<label for="author">Author:</label>
+					<input type="text" id="author" name="author" value="<%= book ? book.author : '' %>" required>
+				</div>
+				<div>
+					<label for="year">Year:</label>
+					<input type="number" id="year" name="year" value="<%= book ? book.year : '' %>" required>
+				</div>
+				<button type="submit">
+					<%= book ? 'Update Book' : 'Add Book' %>
+				</button>
+			</form>
+			<div class="actions">
+				<a href="/books" class="back-button">Back to List</a>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<p>&copy; 2024 Book Management System</p>
+	</footer>
+</body>
+
+</html>

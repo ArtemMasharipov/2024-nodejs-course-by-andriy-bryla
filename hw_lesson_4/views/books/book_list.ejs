@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book List</title>
+	<link rel="stylesheet" href="/stylesheets/base_styles.css">
+</head>
+
+<body>
+	<header>
+		<h1>Book List</h1>
+	</header>
+	<main>
+		<div class="table-container">
+
+			<table>
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Author</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% books.forEach(book=> { %>
+						<tr>
+							<td><a href="/books/<%= book.id %>">
+									<%= book.title %>
+								</a></td>
+							<td>
+								<%= book.author %>
+							</td>
+							<td class="actions">
+								<form action="/books/<%= book.id %>?_method=DELETE" method="POST" style="display: inline;">
+									<button type="submit" class="delete-button">Delete</button>
+								</form>
+								<a href="/books/<%= book.id %>/edit">
+									<button class="edit-button">Edit</button>
+								</a>
+							</td>
+						</tr>
+						<% }) %>
+				</tbody>
+			</table>
+			<div class="actions">
+				<a href="/books/new" class="add-book-link">Add New Book</a>
+				<a href="/" class="back-button">Back to main menu</a>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<p>&copy; 2024 Book Management System</p>
+	</footer>
+</body>
+
+</html>

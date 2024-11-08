@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		<%= book.title %>
+	</title>
+	<link rel="stylesheet" href="/stylesheets/base_styles.css">
+</head>
+
+<body>
+	<header>
+		<h1>
+			<%= book.title %>
+		</h1>
+	</header>
+	<main>
+		<p><strong>Author:</strong>
+			<%= book.author %>
+		</p>
+		<p><strong>Published Year:</strong>
+			<%= book.year %>
+		</p>
+		<a href="/books">Back to List</a>
+	</main>
+	<footer>
+		<p>&copy; 2024 Book Management System</p>
+	</footer>
+</body>
+
+</html>
