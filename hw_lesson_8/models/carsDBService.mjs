@@ -1,4 +1,6 @@
 import Car from './carModel.mjs';
+import fs from 'fs/promises';
+import path from 'path';
 
 class CarsDBService {
 	static async getList() {
@@ -14,6 +16,10 @@ class CarsDBService {
 	static async getCarById(id) {
 		try {
 			const car = await Car.findById(id).exec();
+			if (!car) {
+				console.error(`Car with id ${id} not found`);
+				return null;
+			}
 			return car;
 		} catch (error) {
 			console.error('Error fetching car by ID:', error);
@@ -21,8 +27,8 @@ class CarsDBService {
 		}
 	}
 
-	static async addCar(car) {
-		const newCar = new Car({ ...car });
+	static async addCar(carData) {
+		const newCar = new Car({ ...carData });
 		try {
 			await newCar.save();
 			return newCar;
@@ -38,6 +44,10 @@ class CarsDBService {
 				new: true,
 				runValidators: true,
 			});
+			if (!car) {
+				console.error(`Car with id ${id} not found`);
+				return null;
+			}
 			return car;
 		} catch (error) {
 			console.error('Error updating car:', error);
@@ -48,10 +58,26 @@ class CarsDBService {
 	static async deleteCar(id) {
 		try {
 			const car = await Car.findByIdAndDelete(id);
+			if (!car) {
+				console.error(`Car with id ${id} not found`);
+				return null;
+			}
+			await CarsDBService.handleImageDeletion(car.imgSrc);
 			return car;
 		} catch (error) {
 			console.error('Error deleting car:', error);
 			return null;
+		}
+	}
+
+	static async handleImageDeletion(imgSrc) {
+		if (imgSrc) {
+			try {
+				await fs.unlink(path.resolve('uploads', imgSrc));
+				console.log(`Image file ${imgSrc} successfully deleted.`);
+			} catch (error) {
+				console.error(`Error deleting image file: ${error.message}`);
+			}
 		}
 	}
 }
