@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Register</title>
+	<link rel="stylesheet" href="/stylesheets/base_styles.css">
+	<link rel="stylesheet" href="/stylesheets/auth_styles.css">
+</head>
+
+<body>
+	<%- include('partials/header') %>
+
+		<main>
+			<h1>Register</h1>
+			<% if (errors && errors.length> 0) { %>
+				<div class="error-messages">
+					<% errors.forEach(error=> { %>
+						<p>
+							<%= error.msg %>
+						</p>
+						<% }) %>
+				</div>
+				<% } %>
+					<form action="/users/register" method="POST">
+						<label>Email: <input type="email" name="email" value="<%= data.email || '' %>" required></label>
+						<label>Password: <input type="password" name="password" required></label>
+						<button type="submit">Register</button>
+					</form>
+		</main>
+
+		<%- include('partials/footer') %>
+</body>
+
+</html>
