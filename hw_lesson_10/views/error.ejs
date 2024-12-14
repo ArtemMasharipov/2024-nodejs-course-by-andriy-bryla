@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Error</title>
+	<link rel="stylesheet" href="/stylesheets/base_styles.css">
+</head>
+
+<body>
+	<%- include('partials/header') %>
+
+		<main>
+			<h2>Error</h2>
+			<p>
+				<%= message %>
+			</p>
+			<% if (error.status) { %>
+				<p>Status: <%= error.status %>
+				</p>
+				<% } %>
+					<a href="/" class="back-button">Back to Home</a>
+		</main>
+
+		<%- include('partials/footer') %>
+</body>
+
+</html>
