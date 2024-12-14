@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/stylesheets/base_styles.css">
+	<link rel="stylesheet" href="/stylesheets/owner_views_styles/owner_details.css">
+	<title>
+		<%= owner.fullName %> Details
+	</title>
+</head>
+
+<body>
+	<header>
+		<h1>
+			<%= owner.fullName %> Details
+		</h1>
+	</header>
+	<div class="owner-details">
+		<div class="owner-info">
+			<p><strong>Full Name:</strong>
+				<%= owner.fullName %>
+			</p>
+			<p><strong>Address:</strong>
+				<%= owner.address %>
+			</p>
+		</div>
+	</div>
+	<a href="/owners" class="back-button">Back to List</a>
+	<footer>
+		<p>&copy; 2024 Vehicle Fleet Management System</p>
+	</footer>
+</body>
+
+</html>
