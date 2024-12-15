@@ -23,8 +23,7 @@ router.post(
 	'/',
 	ensureAuthenticated,
 	upload,
-	carValidationSchema,
-	validateRequest('cars/car_form', async () => ({
+	validateRequest('cars/car_form', carValidationSchema, async () => ({
 		owners: await OwnersDBService.getList(),
 	})),
 	asyncHandler(createCar)
@@ -35,8 +34,7 @@ router.put(
 	'/:id',
 	ensureAdmin,
 	upload,
-	carValidationSchema,
-	validateRequest('cars/car_form', async () => ({
+	validateRequest('cars/car_form', carValidationSchema, async () => ({
 		owners: await OwnersDBService.getList(),
 	})),
 	asyncHandler(updateCar)
